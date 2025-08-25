@@ -37,7 +37,7 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('bg-white/95', 'border-border');
   }
 
-  // Update active navigation link
+  // Update active navigation link (if any nav links exist)
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
   
@@ -56,48 +56,5 @@ window.addEventListener('scroll', function() {
       link.classList.add('text-primary');
       link.classList.remove('text-text-secondary');
     }
-  });
-});
-
-// Mobile navigation toggle
-const mobileToggle = document.getElementById('nav-mobile-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-let isMenuOpen = false;
-
-mobileToggle.addEventListener('click', function() {
-  isMenuOpen = !isMenuOpen;
-  
-  if (isMenuOpen) {
-    mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
-    mobileMenu.classList.add('translate-y-0', 'opacity-100');
-    
-    // Animate hamburger to X
-    const spans = mobileToggle.querySelectorAll('span');
-    spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-  } else {
-    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
-    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
-    
-    // Reset hamburger
-    const spans = mobileToggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = '';
-  }
-});
-
-// Close mobile menu when clicking on links
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-  link.addEventListener('click', function() {
-    isMenuOpen = false;
-    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
-    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
-    
-    const spans = mobileToggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = '';
   });
 });
