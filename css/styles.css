@@ -1,206 +1,157 @@
-/* Custom Tailwind CSS configuration and styles */
+/* Terminal Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
 
-/* Custom scroll animations */
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+/* Base Terminal Setup */
+body {
+  background-color: #0d1117;
+  color: #00ff41;
+  font-family: 'Fira Code', monospace;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Fade in animation visible state */
-.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-/* Custom dot background patterns */
-.dot-background {
-  background-image: radial-gradient(#D1D1D6 1px, transparent 1px);
-  background-size: 20px 20px;
+::-webkit-scrollbar-track {
+  background: #0d1117;
+  border-left: 1px solid #30363d;
 }
 
-/* Mobile menu animation states */
-.mobile-menu-open {
-  transform: translateY(0);
-  opacity: 1;
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border: 1px solid #0d1117;
 }
 
-/* Navigation hamburger animation */
-.nav-hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41;
 }
 
-.nav-hamburger.open span:nth-child(2) {
-  opacity: 0;
+/* Selection Style */
+::selection {
+  background: #00ff41;
+  color: #0d1117;
+  text-shadow: none;
 }
 
-.nav-hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
+/* CRT Scanline Effect (Optional but cool) */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
 }
 
-/* Hover animations for buttons */
-.btn-primary {
-  transition: all 0.3s ease;
+/* Terminal Cursor */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: #00ff41;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 20px 25px -5px rgba(0, 122, 255, 0.25), 0 10px 10px -5px rgba(0, 122, 255, 0.1);
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.btn-secondary {
-  transition: all 0.3s ease;
+/* Terminal Command Prompt Style */
+.prompt-user { color: #00ff41; font-weight: bold; }
+.prompt-host { color: #00ff41; }
+.prompt-dir { color: #3b8eea; font-weight: bold; }
+.prompt-symbol { color: #a5d6ff; }
+
+/* Utility Classes */
+.text-glow {
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
 }
 
-.btn-secondary:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 20px 25px -5px rgba(0, 122, 255, 0.25), 0 10px 10px -5px rgba(0, 122, 255, 0.1);
+.border-terminal {
+  border: 1px solid #30363d;
 }
 
-/* Icon hover animations */
-.icon-hover {
-  transition: transform 0.3s ease;
+.terminal-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  transition: all 0.2s ease;
 }
 
-.icon-hover:hover {
-  transform: scale(1.1);
+.terminal-card:hover {
+  border-color: #00ff41;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
 }
 
-/* Smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
+/* Link Styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #30363d;
+  transition: all 0.2s ease;
 }
 
-/* Custom focus states for accessibility */
-.focus-ring:focus {
-  outline: 2px solid #007AFF;
+a:hover {
+  color: #161b22;
+  background-color: #00ff41;
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+
+/* Button Reset & Style */
+.btn-terminal {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  background: transparent;
+  font-family: 'Fira Code', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.btn-terminal:hover {
+  background: #00ff41;
+  color: #0d1117;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Typing Animation Container */
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #00ff41; /* The cursor */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Remove default focus outline and add terminal style */
+*:focus {
+  outline: none;
+}
+
+.focus-visible:focus {
+  outline: 2px solid #00ff41;
   outline-offset: 2px;
-}
-
-/* Card hover effects */
-.card-hover {
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-/* Text gradient effect */
-.text-gradient {
-  background: linear-gradient(135deg, #007AFF, #5AC8FA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Loading animation for images */
-.image-loading {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Custom backdrop blur for modern browsers */
-.backdrop-blur-custom {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* Enhanced navigation styling */
-.nav-blur {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.8);
-}
-
-/* Progress bar smooth animation */
-.progress-smooth {
-  transition: width 0.15s ease-out;
-}
-
-/* Stagger animation delays for About Me section */
-.scroll-animate:nth-child(1) { transition-delay: 0ms; }
-.scroll-animate:nth-child(2) { transition-delay: 150ms; }
-.scroll-animate:nth-child(3) { transition-delay: 300ms; }
-.scroll-animate:nth-child(4) { transition-delay: 450ms; }
-.scroll-animate:nth-child(5) { transition-delay: 600ms; }
-
-/* Hero section animation delays */
-.hero-animate-1 { animation-delay: 0.2s; }
-.hero-animate-2 { animation-delay: 0.4s; }
-.hero-animate-3 { animation-delay: 0.6s; }
-.hero-animate-4 { animation-delay: 0.8s; }
-.hero-animate-5 { animation-delay: 1.0s; }
-
-/* Professional color scheme utilities */
-.text-professional-blue { color: #007AFF; }
-.text-professional-blue-dark { color: #005ECB; }
-.text-professional-blue-light { color: #4DA3FF; }
-.text-professional-accent { color: #5AC8FA; }
-.text-professional-gray { color: #6E6E73; }
-.text-professional-gray-light { color: #8E8E93; }
-
-.bg-professional-blue { background-color: #007AFF; }
-.bg-professional-blue-dark { background-color: #005ECB; }
-.bg-professional-blue-light { background-color: #4DA3FF; }
-.bg-professional-accent { background-color: #5AC8FA; }
-.bg-professional-background { background-color: #F8F9FA; }
-.bg-professional-surface { background-color: #FFFFFF; }
-
-.border-professional-blue { border-color: #007AFF; }
-.border-professional-gray { border-color: #D1D1D6; }
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .mobile-center {
-    text-align: center;
-  }
-  
-  .mobile-full-width {
-    width: 100%;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-  }
-}
-
-/* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .text-professional-gray {
-    color: #000000;
-  }
-  
-  .bg-professional-blue {
-    background-color: #0000FF;
-  }
 }

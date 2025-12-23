@@ -3,236 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DQL | Experienced Full-Stack Engineer</title>
-  <meta name="description" content="DQL - Lead Full-Stack Engineer specializing in backend systems with over a decade of experience. Leveraging AI tools in development workflow while crafting scalable solutions.">
+  <title>dql@portfolio:~$</title>
+  <meta name="description" content="DQL - Lead Full-Stack Engineer. System.init() -> Loading expertise in backend systems and AI tools.">
   
   <!-- SEO Meta Tags -->
-  <meta name="keywords" content="full-stack engineer, backend developer, software engineer, scalable systems, technology solutions, philippines, philippine programmer, AI integration, artificial intelligence, software development philippines">
+  <meta name="keywords" content="full-stack engineer, backend developer, software engineer, terminal portfolio, developer portfolio">
   <meta name="author" content="DQL">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dqlopez.github.io">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dqlopez.github.io">
-  <meta property="og:title" content="DQL | Experienced Full-Stack Engineer">
-  <meta property="og:description" content="DQL - Lead Full-Stack Engineer specializing in backend systems with over a decade of experience. Leveraging AI tools in development workflow while crafting scalable solutions.">
+  <meta property="og:title" content="dql@portfolio:~$">
+  <meta property="og:description" content="Lead Full-Stack Engineer | Backend Systems | AI Integration">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/1684989?v=4">
-  <meta property="og:site_name" content="DQL Portfolio">
   
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://dqlopez.github.io">
-  <meta property="twitter:title" content="DQL | Experienced Full-Stack Engineer">
-  <meta property="twitter:description" content="DQL - Lead Full-Stack Engineer specializing in backend systems with over a decade of experience. Leveraging AI tools in development workflow while crafting scalable solutions.">
-  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/1684989?v=4">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-  
-  <!-- Performance and Accessibility -->
-  <meta name="theme-color" content="#007AFF">
-  <meta name="color-scheme" content="light dark">
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "DQL",
-    "jobTitle": "Full-Stack Software Engineer",
-    "description": "Lead Full-Stack Engineer specializing in backend systems with over a decade of experience. Leveraging AI tools in development workflow while crafting scalable solutions.",
-    "url": "https://dqlopez.github.io",
-    "sameAs": [
-      "https://github.com/dqlopez",
-      "https://www.linkedin.com/in/dqlopez/"
-    ],
-    "email": "dante@dqlopez.com",
-    "image": "https://avatars.githubusercontent.com/u/1684989?v=4",
-    "knowsAbout": [
-      "Full-Stack Development",
-      "Backend Architecture",
-      "Scalable Systems",
-      "Software Engineering"
-    ]
-  }
-  </script>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="css/tailwind.config.js"></script>
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body class="font-roboto text-black overflow-x-hidden transition-colors duration-300">
-  <!-- Scroll Progress Indicator -->
-  <div class="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
-    <div class="h-full bg-primary transition-all duration-150 ease-out" id="scroll-progress" style="width: 0%"></div>
+<body class="bg-terminal-bg text-terminal-green font-mono min-h-screen p-4 md:p-8 selection:bg-terminal-green selection:text-terminal-bg">
+  <div class="scanlines"></div>
+  
+  <!-- Top Bar / Tmux-like Status Line -->
+  <div class="fixed top-0 left-0 right-0 bg-surface border-b border-border z-50 px-4 py-2 text-xs md:text-sm flex justify-between items-center opacity-90">
+    <div class="flex gap-4">
+      <span class="text-terminal-dim">user:</span><span class="font-bold">dql</span>
+      <span class="text-terminal-dim">host:</span><span class="font-bold">github.io</span>
+    </div>
+    <div class="flex gap-4">
+      <span id="clock" class="text-text-secondary">00:00:00</span>
+      <span class="text-terminal-green font-bold">ONLINE</span>
+    </div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="fixed top-1 left-0 right-0 h-16 bg-white/80 backdrop-blur-xl border-b border-transparent transition-all duration-300 z-40" id="nav">
-    <div class="max-w-6xl mx-auto h-full flex items-center justify-between px-8">
-      <div class="nav-logo">
-        <a href="#hero" class="font-space font-bold text-3xl text-primary tracking-tight">DQL</a>
+  <div class="max-w-5xl mx-auto mt-16 space-y-12">
+    
+    <!-- Hero Section / Boot Sequence -->
+    <section id="hero" class="space-y-4">
+      <div class="flex items-start gap-2">
+        <span class="text-accent">➜</span>
+        <span class="text-blue-400 font-bold">~</span>
+        <span class="typing-container overflow-hidden whitespace-nowrap border-r-2 border-terminal-green animate-typing">
+          ./init-portfolio.sh --verbose
+        </span>
       </div>
-      <div class="flex items-center gap-4" id="nav-links">
-        <a href="https://github.com/dqlopez" target="_blank" class="text-text-secondary hover:text-primary transition-colors duration-200 p-2 rounded-lg" title="GitHub">
-          <svg height="20" width="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/dqlopez/" target="_blank" class="text-text-secondary hover:text-primary transition-colors duration-200 p-2 rounded-lg" title="LinkedIn">
-          <svg height="20" width="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.328 1.248h.015zm4.908 8.212V9.359c0-.215.016-.43.08-.584.176-.43.576-.876 1.248-.876.88 0 1.232.662 1.232 1.634v3.861h2.401V9.22c0-2.221-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193h.03V6.169H6.542c.03.7 0 7.225 0 7.225h2.401z"/></svg>
-        </a>
+      
+      <div class="pl-6 space-y-2 text-text-secondary animate-fade-in" style="animation-delay: 1s; opacity: 0; animation-fill-mode: forwards;">
+        <p>[OK] Loading core modules...</p>
+        <p>[OK] Initializing graphics engine...</p>
+        <p>[OK] Fetching profile data from github.com/dqlopez...</p>
+        <p class="text-terminal-green">[SUCCESS] System ready.</p>
       </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center pt-20 md:pt-16 bg-white" style="background-image: radial-gradient(#D1D1D6 1px, transparent 1px); background-size: 20px 20px;">
-    <div class="max-w-6xl w-full mx-auto px-8">
-      <div class="flex flex-col items-center justify-center text-center space-y-8">
-        <img class="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-6 border-white transition-all duration-500 hover:scale-105 animate-fadeInUp" 
-             src="https://avatars.githubusercontent.com/u/1684989?v=4" 
-             alt="Dante Q. Lopez - Software Engineer"
-             style="animation-delay: 0.2s; opacity: 0;">
+      <div class="pt-8 flex flex-col md:flex-row gap-8 items-center md:items-start animate-fade-in" style="animation-delay: 2s; opacity: 0; animation-fill-mode: forwards;">
+        <!-- ASCII Art or Styled Image -->
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-terminal-green rounded-lg opacity-25 group-hover:opacity-50 transition duration-200 blur"></div>
+          <img src="https://avatars.githubusercontent.com/u/1684989?v=4" 
+               alt="DQL Profile" 
+               class="relative w-48 h-48 md:w-56 md:h-56 rounded border-2 border-terminal-green grayscale contrast-125 brightness-90 hover:grayscale-0 transition-all duration-500">
+        </div>
         
-        <h1 class="text-4xl md:text-6xl font-bold text-black leading-tight max-w-4xl animate-fadeInUp"
-            style="animation-delay: 0.4s; opacity: 0;">
-          Lead Full-Stack Engineer
-        </h1>
-        
-        <h2 class="text-xl md:text-2xl font-normal text-primary leading-relaxed max-w-3xl animate-fadeInUp"
-            style="animation-delay: 0.6s; opacity: 0;">
-          Backend systems specialist with over a decade of experience
-        </h2>
-        
-        <p class="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl animate-fadeInUp"
-           style="animation-delay: 0.8s; opacity: 0;">
-          Driving scalable solution development through AI-enhanced workflows.
+        <div class="space-y-4 flex-1">
+          <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tighter">
+            <span class="text-terminal-green">DQL</span><span class="animate-cursor-blink">_</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-text-secondary border-l-4 border-terminal-green pl-4">
+            Lead Full-Stack Engineer
+          </h2>
+          <p class="text-lg text-text-secondary leading-relaxed max-w-2xl">
+            Backend systems specialist with over a decade of experience.
+            <br>Driving scalable solution development through AI-enhanced workflows.
+          </p>
+          
+          <div class="flex gap-4 pt-4">
+            <a href="#about" class="btn-terminal">
+              [ cat about.md ]
+            </a>
+            <a href="mailto:dante@dqlopez.com" class="btn-terminal">
+              [ mailto:dante ]
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section / System Stats -->
+    <section id="about" class="pt-12 space-y-6 animate-fade-in" style="animation-delay: 2.5s; opacity: 0; animation-fill-mode: forwards;">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="text-accent">➜</span>
+        <span class="text-blue-400 font-bold">~</span>
+        <span class="text-white">neofetch --config minimalist</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="terminal-card p-6 rounded">
+          <div class="text-accent text-sm mb-2">./experience.log</div>
+          <div class="text-3xl font-bold text-white mb-1">10+ Years</div>
+          <div class="text-sm text-text-secondary">Full-Stack Engineering & Scalable Architectures</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="terminal-card p-6 rounded">
+          <div class="text-accent text-sm mb-2">./focus.conf</div>
+          <div class="text-3xl font-bold text-white mb-1">Backend</div>
+          <div class="text-sm text-text-secondary">Systems Architecture & Distributed Systems</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="terminal-card p-6 rounded">
+          <div class="text-accent text-sm mb-2">./role.sh</div>
+          <div class="text-3xl font-bold text-white mb-1">Leader</div>
+          <div class="text-sm text-text-secondary">Mentoring Teams & Technical Guidance</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="terminal-card p-6 rounded">
+          <div class="text-accent text-sm mb-2">./tools.json</div>
+          <div class="text-3xl font-bold text-white mb-1">AI Integrated</div>
+          <div class="text-sm text-text-secondary">Enhanced Development Workflows</div>
+        </div>
+      </div>
+
+      <!-- Philosophy Block -->
+      <div class="mt-8 border border-dashed border-border p-6 rounded bg-surface/50">
+        <p class="text-text-secondary mb-2"># Personal Philosophy</p>
+        <p class="text-lg">
+          <span class="text-terminal-dim">/*</span> 
+          When not building software, I'm exploring trails and discovering new places with my family. 
+          Balance is the key to sustainable engineering. 
+          <span class="text-terminal-dim">*/</span>
         </p>
-        
-        <div class="flex flex-col sm:flex-row gap-5 animate-fadeInUp" style="animation-delay: 1.0s; opacity: 0;">
-          <a href="#about" class="group px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-1 border-2 border-primary transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            <span class="inline-flex items-center gap-2">
-              About Me
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </span>
-          </a>
-          <a href="mailto:dante@dqlopez.com" class="group px-8 py-4 bg-white text-primary border-2 border-primary rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-1 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            <span class="inline-flex items-center gap-2">
-              Get in Touch
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-            </span>
-          </a>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="min-h-screen flex items-center justify-center py-20 bg-background" style="background-image: radial-gradient(#D1D1D6 1px, transparent 1px); background-size: 20px 20px;">
-    <div class="max-w-6xl w-full mx-auto px-8">
-      <h2 class="text-4xl md:text-5xl font-semibold text-black text-center mb-12 scroll-animate" 
-          id="about-title">
-        About Me
-      </h2>
-      
-      <div class="max-w-4xl mx-auto space-y-16">
-        <!-- About Text -->
-        <div class="text-center space-y-8">
-          <p class="text-xl md:text-2xl text-black leading-relaxed scroll-animate">
-            With over a decade of experience as a full-stack software engineer, I work across the entire technology stack with deep specialization in backend architecture.
-          </p>
-          <p class="text-lg md:text-xl text-text-secondary leading-relaxed scroll-animate">
-            My passion lies in solving complex technical challenges and creating reliable, scalable infrastructure while finding balance through outdoor adventures and quality time with family.
-          </p>
-        </div>
-        
-        <!-- Skills & Experience Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 scroll-animate">
-          <div class="text-center space-y-4">
-            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-              <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-black">10+ Years</h3>
-            <p class="text-primary font-semibold">Full-Stack Engineering</p>
-            <p class="text-text-secondary leading-relaxed">Architecting scalable systems from frontend to backend infrastructure</p>
-          </div>
-          
-          <div class="text-center space-y-4">
-            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-              <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-black">Backend Focus</h3>
-            <p class="text-primary font-semibold">Systems Architecture</p>
-            <p class="text-text-secondary leading-relaxed">Deep expertise in server-side technologies and distributed systems</p>
-          </div>
-          
-          <div class="text-center space-y-4">
-            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-              <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-black">Technical Leader</h3>
-            <p class="text-primary font-semibold">Mentoring & Growth</p>
-            <p class="text-text-secondary leading-relaxed">Guiding teams and mentoring engineers for technical excellence</p>
-          </div>
-          
-          <div class="text-center space-y-4">
-            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-              <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                <path d="M6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-black">AI Integration</h3>
-            <p class="text-primary font-semibold">Development Workflow</p>
-            <p class="text-text-secondary leading-relaxed">Leveraging AI tools to accelerate development and enhance code quality</p>
-          </div>
-        </div>
-        
-        <!-- Personal Philosophy -->
-        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-100 shadow-lg scroll-animate">
-          <div class="text-center space-y-6">
-            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-              <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold text-black">Life Beyond Code</h3>
-            <p class="text-xl text-primary font-semibold">Adventures & Exploration</p>
-            <p class="text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">
-              When not building software, I'm exploring trails and discovering new places with my family, always seeking the next adventure on two wheels or two feet.
-            </p>
-          </div>
-        </div>
+    <!-- Links / Footer -->
+    <section id="contact" class="pt-12 pb-20 space-y-6 animate-fade-in" style="animation-delay: 3s; opacity: 0; animation-fill-mode: forwards;">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="text-accent">➜</span>
+        <span class="text-blue-400 font-bold">~</span>
+        <span class="text-white">ls -la ./connections/</span>
       </div>
-      
-      <div class="text-center space-y-4 mt-16 scroll-animate">
-          <p class="text-lg text-text-secondary">
-            <span class="font-semibold">Explore my technical projects and contributions on</span> 
-            <a href="https://github.com/dqlopez" target="_blank" class="text-primary font-semibold hover:text-primary-dark transition-colors duration-200 hover:underline">GitHub</a>
-          </p>
-          <p class="text-lg text-text-secondary">
-            <span class="font-semibold">Connect with me professionally on</span> 
-            <a href="https://www.linkedin.com/in/dqlopez/" target="_blank" class="text-primary font-semibold hover:text-primary-dark transition-colors duration-200 hover:underline">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- JavaScript Files -->
+      <div class="flex flex-col gap-2 font-mono text-sm md:text-base">
+        <div class="flex items-center gap-4 hover:bg-surface p-2 rounded transition-colors cursor-pointer group">
+          <span class="text-text-secondary group-hover:text-white">drwxr-xr-x</span>
+          <span class="text-terminal-dim">dql staff</span>
+          <a href="https://github.com/dqlopez" target="_blank" class="text-blue-400 hover:underline">github.com/dqlopez</a>
+          <span class="text-terminal-dim ml-auto hidden md:block"># Code repositories</span>
+        </div>
+        
+        <div class="flex items-center gap-4 hover:bg-surface p-2 rounded transition-colors cursor-pointer group">
+          <span class="text-text-secondary group-hover:text-white">drwxr-xr-x</span>
+          <span class="text-terminal-dim">dql staff</span>
+          <a href="https://www.linkedin.com/in/dqlopez/" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/dqlopez</a>
+          <span class="text-terminal-dim ml-auto hidden md:block"># Professional network</span>
+        </div>
+
+        <div class="flex items-center gap-4 hover:bg-surface p-2 rounded transition-colors cursor-pointer group">
+          <span class="text-text-secondary group-hover:text-white">-rw-r--r--</span>
+          <span class="text-terminal-dim">dql staff</span>
+          <a href="mailto:dante@dqlopez.com" class="text-blue-400 hover:underline">dante@dqlopez.com</a>
+          <span class="text-terminal-dim ml-auto hidden md:block"># Direct contact protocol</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-terminal-dim text-sm py-8 border-t border-border mt-12">
+      <p>echo "© 2025 DQL. All systems operational."</p>
+    </footer>
+
+  </div>
+
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/interactions.js"></script>
+  <script>
+    // Simple Clock
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { hour12: false });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
