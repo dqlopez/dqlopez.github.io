@@ -1,85 +1,61 @@
-# Personal Portfolio Website
+# dql@portfolio:~$
 
-A clean, professional personal portfolio website showcasing full-stack engineering expertise and leadership experience.
+A deeply geeky, terminal-themed personal portfolio website. It presents professional full-stack engineering experience through an interactive command-line interface (CLI) aesthetic, featuring boot sequences, system logs, and directory listings.
 
-## Overview
+## System Features
 
-This is a static website built with modern web technologies, featuring responsive design and smooth animations. The site highlights over a decade of software engineering experience with a focus on backend systems and technical leadership.
+*   **CLI Aesthetic:** Authentic terminal feel with Fira Code fonts, blinking cursors, and a subtle CRT scanline overlay.
+*   **Interactive Boot Sequence:** Animated "startup" logs and typing effects that introduce the user profile.
+*   **System Status Bar:** A `tmux`-like status line displaying user context and a live clock.
+*   **Responsive & Fast:** Fully responsive design that works on mobile (no keyboard required) and scores 95+ on performance metrics.
+*   **Cache Smart:** Optimized caching strategy with versioning for instant updates.
 
-## Features
+## Tech Stack
 
-- **Responsive Design**: Optimized for all device sizes
-- **Smooth Animations**: Scroll-triggered animations and hover effects
-- **Progressive Enhancement**: Works without JavaScript, enhanced with it
-- **SEO Optimized**: Complete meta tags and structured data
-- **Accessible**: Built with accessibility best practices
-- **Performance Focused**: Lightweight and fast loading
-
-## Technology Stack
-
-- **HTML5**: Semantic markup structure
-- **Tailwind CSS**: Utility-first CSS framework
-- **Vanilla JavaScript**: Modern ES6+ features
-- **GitHub Pages**: Static site hosting
+*   **Core:** HTML5, Vanilla JavaScript (ES6+)
+*   **Styling:** Tailwind CSS (via CDN) + Custom CSS variables
+*   **Fonts:** Fira Code (Google Fonts)
+*   **Hosting:** GitHub Pages
 
 ## Project Structure
 
-```
-.
-├── index.html          # Main HTML file
+```bash
+/home/dql/portfolio
+├── index.html           # Core system entry point
 ├── css/
-│   ├── styles.css      # Custom styles and utilities
-│   └── tailwind.config.js  # Tailwind configuration
-├── js/
-│   ├── navigation.js   # Navigation and scroll functionality
-│   ├── animations.js   # Scroll-triggered animations
-│   └── interactions.js # Interactive effects and touch handling
-└── CNAME              # Custom domain configuration
+│   ├── styles.css       # Terminal themes & scanline effects
+│   └── tailwind.config.js # Custom color palette (#00ff41)
+└── js/
+    ├── navigation.js    # Smooth scrolling & focus handling
+    ├── animations.js    # Typing & boot sequence logic
+    └── interactions.js  # Easter eggs & interactive elements
 ```
 
-## Development
+## Local Initialization
 
-The website is designed as a static site for optimal performance and easy deployment on GitHub Pages.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/dqlopez/dqlopez.github.io.git
+    cd dqlopez.github.io
+    ```
 
-### Local Development
+2.  **Start a local server:**
+    ```bash
+    # Python 3
+    python3 -m http.server 8000
+    
+    # Node.js
+    npx serve .
+    ```
 
-1. Clone the repository
-2. Open `index.html` in a modern web browser
-3. For live reloading during development, use a local server:
-   ```bash
-   python -m http.server 8000
-   # or
-   npx serve .
-   ```
-
-### Deployment
-
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
-
-## Design Philosophy
-
-- **Minimalist**: Clean, focused design without unnecessary elements
-- **Professional**: Business-appropriate styling and content
-- **User-Centric**: Intuitive navigation and clear information hierarchy
-- **Modern**: Contemporary web design patterns and interactions
+3.  **Access:** Open `http://localhost:8000` in your browser.
 
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance
-
-- Lighthouse score: 95+ across all metrics
-- First Contentful Paint: < 1.5s
-- Largest Contentful Paint: < 2.5s
-- Cumulative Layout Shift: < 0.1
-
-## Contact
-
-For inquiries about this website or professional opportunities, please use the contact information provided on the site.
+*   Chrome (latest)
+*   Firefox (latest)
+*   Safari (latest)
+*   Edge (latest)
 
 ## License
 
